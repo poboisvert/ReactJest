@@ -1,9 +1,14 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
 import App from 'components/App';
 import { shallow } from 'enzyme';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
+
+let wrapped;
+
+beforeEach(() => {
+  wrapped = shallow(<App />);
+});
 
 test('Shows the component CommentBox', () => {
   /* const div = document.createElement('div');
@@ -17,11 +22,9 @@ test('Shows the component CommentBox', () => {
   expect(div.innerHTML).toContain('Comment Box');
 
   ReactDOM.unmountComponentAtNode(div); */
-
-  const wrapped = shallow(<App />);
-
   // Try to break the test to see what make it pass
 
+  const wrapped = shallow(<App />);
   expect(wrapped.find(CommentBox).length).toEqual(1);
 });
 
