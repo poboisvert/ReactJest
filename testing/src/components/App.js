@@ -1,11 +1,10 @@
 import React from 'react';
-import CommentBox from './CommentBox';
-import CommentList from './CommentList';
+import CommentBox from 'components/CommentBox';
+import CommentList from 'components/CommentList';
 
 export default () => {
   return (
     <div>
-      I am the alive
       <CommentBox />
       <CommentList />
     </div>
